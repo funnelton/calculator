@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container flex mt-5">
+        <div class="input_fields col-12">
+
+            <!-- Input fields -->
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Vehicle model</span>
+                <input id="vehicleModel" type="text" class="form-control" placeholder="Vehicle Model">
+            </div>
+
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Vehicle type</span>
+                <select id="vehicleType" class="form-select">
+                    <option value="1" selected>Sedan / Coupe / Hatchback</option>
+                    <option value="2">SUV / Track</option>
+                    <option value="3">VAN</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Glass price</span>
+                <input id="glassPrice" type="text" class="form-control" placeholder="Glass price" inputmode="decimal">
+            </div>
+
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Accessory 2</span>
+                <input type="text" class="form-control accessory" placeholder="Glass price" inputmode="decimal">
+            </div>
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Accessory 3</span>
+                <input type="text" class="form-control accessory" placeholder="Glass price" inputmode="decimal">
+            </div>
+            <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Accessory 4</span>
+                <input type="text" class="form-control accessory" placeholder="Glass price" inputmode="decimal">
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="d-grid gap-2">
+                <button id="getEstimate" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Get estimate
+                </button>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Summary</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="modal-body" class="modal-body">
+                            <div>
+                                <p id="summary_vehicleModel"></p>
+                            </div>
+                            <div>
+                                <span id="summary_glassAndMoldingPrice"></span>
+                            </div>
+                            <div>
+                                <span id="summary_replacementPrice"></span>
+                            </div>
+                            <div>
+                                <span id="summary_tax"></span>
+                            </div>
+                            <div>
+                                <span id="summary_total"><b></b></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <!-- <button id="copy" type="button" class="btn btn-warning">Copy</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
